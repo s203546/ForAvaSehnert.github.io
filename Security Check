@@ -1,0 +1,52 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Security Check</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f3f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .popup {
+      background: white;
+      padding: 20px;
+      width: 320px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.2);
+    }
+    .grid img {
+      width: 90px;
+      margin: 3px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .grid img.selected {
+      border-color: #1a73e8;
+    }
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="popup">
+  <strong>Security Check</strong>
+  <p>Select all images containing <b>YOU</b></p>
+
+  <div class="grid">
+    <img src="you1.jpg" onclick="this.classList.toggle('selected')">
+    <img src="you2.jpg" onclick="this.classList.toggle('selected')">
+    <img src="you3.jpg" onclick="this.classList.toggle('selected')">
+  </div>
+
+  <button onclick="alert('✅ Human detected')">Verify</button>
+</div>
+
+</body>
+</html>
