@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Security Check</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f1f3f4;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .popup {
+      background: white;
+      width: 380px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin: 12px 0;
+    }
+
+    .grid img {
+      width: 100%;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .grid img.selected {
+      border-color: #1a73e8;
+    }
+
+    button {
+      width: 100%;
+      padding: 8px;
+      background: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="overlay">
+  <div class="popup">
+    <h2>Security Check</h2>
+    <p>Select your <b>boyfriend</b></p>
+
+    <div class="grid">
+      <img src="bf1.jpg" onclick="this.classList.toggle('selected')">
+      <img src="bf2.jpg" onclick="this.classList.toggle('selected')">
+      <img src="bf3.jpg" onclick="this.classList.toggle('selected')">
+      <img src="bf4.jpg" onclick="this.classList.toggle('selected')">
+      <img src="bf5.jpg" onclick="this.classList.toggle('selected')">
+      <img src="bf6.jpg" onclick="this.classList.toggle('selected')">
+      <img src="bf7.jpg" onclick="this.classList.toggle('selected')">
+      <img src="bf8.jpg" onclick="this.classList.toggle('selected')">
+      <img src="bf9.jpg" onclick="this.classList.toggle('selected')">
+    </div>
+
+    <button onclick="alert('✅ Boyfriend verified')">Verify</button>
+  </div>
+</div>
+
+</body>
+</html>
